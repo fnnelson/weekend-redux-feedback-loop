@@ -17,26 +17,31 @@ import App from './components/App/App';
 //     comments: "I love this stuff!"
 // }
 
-// trying to get all action types in one reducer to each update a property of the object whenever that action type is dispatched
+// I'm trying to get all action types in one reducer to each add (or update a property of the object whenever that action type is dispatched
+
 const feedbackData = (state = {}, action) => {
     if (action.type === 'SET_FEELING_RATING') {
-        return action.payload.feelingRating
+        let feelingRating = action.payload;
+        return { ...state, feelingRating };
     }
     if (action.type === 'SET_UNDERSTANDING_RATING') {
-        return action.payload.understandingRating
+        let understandingRating = action.payload;
+        return { ...state, understandingRating };
     }
     if (action.type === 'SET_SUPPORTED_RATING') {
-        return action.payload.supportedRating
+        let supportedRating = action.payload;
+        return { ...state, supportedRating };
     }
     if (action.type === 'SET_COMMENTS') {
-        return action.payload.comments
+        let comments = action.payload;
+        return { ...state, comments };
     }
     return state;
 }
 
 const reduxStore = createStore(
     combineReducers({
-        feedbackData,
+        feedbackData
     }),
     applyMiddleware(logger)
 );
@@ -44,7 +49,7 @@ const reduxStore = createStore(
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <Provider state={reduxStore}>
+        <Provider store={reduxStore}>
             <App />
         </Provider>
     </React.StrictMode>

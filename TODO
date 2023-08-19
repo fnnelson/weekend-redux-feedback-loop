@@ -1,0 +1,27 @@
+[ ] figure out how to get Routes working only when rating is given
+ - one idea is to have conditional rendering.. maybe one button has a different onClick that gives an alert, the other sends the dispatch and the user to the next page
+ - note: if necessary, you can make a link designed like a button
+
+Don't use a button as a link. Instead, use a link styled as a button.
+<Link to="/signup" className="btn btn-primary">Sign up</Link>
+
+[x] Set up feeling page
+[x] Set up feeling dispatch, make sure working
+[x] Set up understanding page
+[x] Set up understanding dispatch, make sure working
+[x] Set up supported page
+[x] Set up supported dispatch, make sure working
+[x] Set up comment page
+[x] Set up comment dispatch, make sure working
+
+[x] Set up router, routes, links
+
+[ ] Set up summary page using global state properties
+[ ] use global state to get POST ready on client-side
+[ ] Set up server side for POST received from client and sent to DB
+
+[ ] Make a home page with just a button to start?  I don't like seeing the first question right away
+
+Stretch
+[ ] Work on GET route on client-side
+[ ] GET route on server-side, talking to database
