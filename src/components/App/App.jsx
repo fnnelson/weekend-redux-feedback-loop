@@ -6,6 +6,7 @@ import { FeelingPage } from '../FeelingPage/FeelingPage';
 import { UnderstandingPage } from '../UnderstandingPage/UnderstandingPage';
 import { SupportedPage } from '../SupportedPage/SupportedPage';
 import { CommentPage } from '../CommentPage/CommentPage';
+import { SummaryPage } from './SummaryPage/SummaryPage';
 
 import { HashRouter as Router, Route } from 'react-router-dom';
 
@@ -35,6 +36,11 @@ function App() {
         <Route path='/comment'>
           <CommentPage />
         </Route>
+
+        <Route path='/summary'>
+          <SummaryPage />
+        </Route>
+
       </Router>
 
     </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 export function CommentPage() {
 
@@ -20,7 +21,9 @@ export function CommentPage() {
             <input type="text" value={comments} onChange={(event) => setComments(event.target.value)} />
         </div>
         <div className='main-content'>
-            <button onClick={handleClick}>NEXT</button>
+            <Link to='/summary'>
+                <button onClick={handleClick}>NEXT</button>
+            </Link>
         </div>
     </div>;
 
