@@ -31,7 +31,7 @@ export function SupportedPage() {
             <p>2 = Old wooden chair</p>
             <p>3 = Cushiony bar stool with a low back</p>
             <p>4 = Cubicle office chair</p>
-            <p>5 = Lay-Z Boy</p>
+            <p>5 = La-Z-Boy reclined with the leg-rest kicked out</p>
             <input type="number" min={1} max={5} value={supportedRating} onChange={(event) => setSupportedRating(event.target.valueAsNumber)} />
         </div>
         <div className='main-content'>
