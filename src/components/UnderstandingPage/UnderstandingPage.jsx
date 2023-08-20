@@ -17,7 +17,7 @@ export function UnderstandingPage() {
         } else {
             dispatch({ type: 'SET_UNDERSTANDING_RATING', payload: understandingRating });
             setUnderstandingRating('');
-            alert("you will now go to the supported page");
+            // alert("you will now go to the supported page");
             history.push('/supported');
         }
     }
@@ -27,9 +27,9 @@ export function UnderstandingPage() {
         <div className='main-content'>
             <p>1 = What content?</p>
             <p>2 = Not very well</p>
-            <p>3 = Getting a few things</p>
-            <p>4 = Starting to get it</p>
-            <p>5 = Full understanding of the content</p>
+            <p>3 = Starting to understand some of it</p>
+            <p>4 = Getting most of it</p>
+            <p>5 = Complete understanding of material, the meaning of life, the past and future, and of all space, time, and contents of the universe and all universes both existing and potential.</p>
             <input type="number" min={1} max={5} value={understandingRating} onChange={(event) => setUnderstandingRating(event.target.valueAsNumber)} />
         </div>
         <div className='main-content'>

@@ -36,6 +36,9 @@ const feedbackData = (state = {}, action) => {
         let comments = action.payload;
         return { ...state, comments };
     }
+    if (action.type === 'RESET_FEEDBACK') {
+        return {};
+    }
     return state;
 }
 

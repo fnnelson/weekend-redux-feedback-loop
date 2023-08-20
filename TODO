@@ -17,13 +17,13 @@ Don't use a button as a link. Instead, use a link styled as a button.
  - note: if necessary, you can make a link designed like a button
     [x] ended up using useHistory! Forgot we touched on this one random day
  
-[ ] Set up summary page using global state properties
-[ ] use global state to get POST ready on client-side
-[ ] Set up server side for POST received from client and sent to DB
+[x] Set up summary page using global state properties
+[x] use global state to get POST ready on client-side
+[x] Set up server side for POST received from client and sent to DB
 
-[ ] Make a home page with just a button to start?  I don't like seeing the first question right away
-
+[x] Reset global state
 
 Stretch
+[ ] Make a home page with just a button to start?  I don't like seeing the first question right away
 [ ] Work on GET route on client-side
 [ ] GET route on server-side, talking to database

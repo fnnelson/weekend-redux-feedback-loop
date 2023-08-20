@@ -17,7 +17,7 @@ export function SupportedPage() {
         } else {
             dispatch({ type: 'SET_SUPPORTED_RATING', payload: supportedRating });
             setSupportedRating('');
-            alert("you will now go to the comment page")
+            // alert("you will now go to the comment page")
             history.push('/comment')
         }
 
@@ -27,11 +27,11 @@ export function SupportedPage() {
     return <div>
         <h1>How well are you being supported?</h1>
         <div className='main-content'>
-            <p>1 = I'm not? Super sore</p>
-            <p>2 = A little cushion</p>
-            <p>3 = Soft/firm support.  Not ideal.</p>
-            <p>4 = Mostly good, needs a few tweaks</p>
-            <p>5 = Full lumbar support - feeling great</p>
+            <p>1 = Gym bleachers</p>
+            <p>2 = Old wooden chair</p>
+            <p>3 = Cushiony bar stool with a low back</p>
+            <p>4 = Cubicle office chair</p>
+            <p>5 = Lay-Z Boy</p>
             <input type="number" min={1} max={5} value={supportedRating} onChange={(event) => setSupportedRating(event.target.valueAsNumber)} />
         </div>
         <div className='main-content'>

@@ -17,7 +17,7 @@ export function FeelingPage() {
         } else {
             dispatch({ type: 'SET_FEELING_RATING', payload: feelingRating });
             setFeelingRating('');
-            alert("you will now go to the understanding page");
+            // alert("you will now go to the understanding page");
             history.push('/understanding');
         }
     }
