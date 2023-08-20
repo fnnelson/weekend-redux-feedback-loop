@@ -1,17 +1,25 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 export function FeelingPage() {
 
     const dispatch = useDispatch();
 
+    const history = useHistory();
+
     const [feelingRating, setFeelingRating] = useState('');
 
     const handleClick = () => {
         console.log("inside of handleClick()", feelingRating);
-        dispatch({ type: 'SET_FEELING_RATING', payload: feelingRating });
-        setFeelingRating('');
+        if (feelingRating == '') {
+            alert("Please enter a rating")
+        } else {
+            dispatch({ type: 'SET_FEELING_RATING', payload: feelingRating });
+            setFeelingRating('');
+            alert("you will now go to the understanding page");
+            history.push('/understanding');
+        }
     }
 
     return <div>
@@ -25,9 +33,7 @@ export function FeelingPage() {
             <input type="number" min={1} max={5} value={feelingRating} onChange={(event) => setFeelingRating(event.target.valueAsNumber)} />
         </div>
         <div className='main-content'>
-            <Link to='/understanding'>
-                <button onClick={handleClick}>NEXT</button>
-            </Link>
+            <button onClick={handleClick}>NEXT</button>
         </div>
     </div>;
 }

@@ -1,17 +1,25 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 export function UnderstandingPage() {
 
     const dispatch = useDispatch();
 
+    const history = useHistory();
+
     const [understandingRating, setUnderstandingRating] = useState('');
 
     const handleClick = () => {
         console.log("inside of handleClick()", understandingRating);
-        dispatch({ type: 'SET_UNDERSTANDING_RATING', payload: understandingRating });
-        setUnderstandingRating('');
+        if (understandingRating == '') {
+            alert("Please enter a rating")
+        } else {
+            dispatch({ type: 'SET_UNDERSTANDING_RATING', payload: understandingRating });
+            setUnderstandingRating('');
+            alert("you will now go to the supported page");
+            history.push('/supported');
+        }
     }
 
     return <div>
@@ -25,9 +33,7 @@ export function UnderstandingPage() {
             <input type="number" min={1} max={5} value={understandingRating} onChange={(event) => setUnderstandingRating(event.target.valueAsNumber)} />
         </div>
         <div className='main-content'>
-            <Link to='/supported'>
-                <button onClick={handleClick}>NEXT</button>
-            </Link>
+            <button onClick={handleClick}>NEXT</button>
         </div>
     </div>;
 
