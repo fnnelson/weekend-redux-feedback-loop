@@ -45,7 +45,6 @@ function App() {
         <Route path='/success'>
           <SuccessPage />
         </Route>
-
       </Router>
 
     </div>
