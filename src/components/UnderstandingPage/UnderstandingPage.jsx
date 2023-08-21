@@ -29,7 +29,7 @@ export function UnderstandingPage() {
             <p>2 = Not very well</p>
             <p>3 = Starting to understand some of it</p>
             <p>4 = Getting most of it</p>
-            <p>5 = Complete understanding of material</p>
+            <p>5 = Complete understanding of material, the meaning of life, the past and future, and of all space, time, and contents of this universe and all other universes both existing and potential.</p>
             <input type="number" min={1} max={5} value={understandingRating} onChange={(event) => setUnderstandingRating(event.target.valueAsNumber)} />
         </div>
         <div className='main-content'>
